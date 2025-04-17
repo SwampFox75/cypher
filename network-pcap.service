@@ -1,0 +1,16 @@
+[Unit]
+Description=Network Traffic Capture
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=30
+StartLimitBurst=4
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/tcpdump -i enp139s0np0 -nnn ip -s 34 -K -U -B 1048576 -G 3600 -w /data/PCAP/IP-%Y%m%dT%H%M%S.pcap
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
