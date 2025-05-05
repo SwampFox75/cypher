@@ -55,7 +55,7 @@ sudo cp -f $svc_temp_path $svc_dest_path
 # make a copy of the tcpdump script to run from the template in the scripts directory
 sudo cp -f $tcp_temp_path $tcp_dest_path
 # make the fresh copy of the script executable
-sudo chmod +x $tcp_dest_path
+sudo chmod u+x $tcp_dest_path
 # replace the anchor word (interFFFace) in the template with the chosen interface name
 sudo sed -i "s/interFFFace/$pcap_interface/" $tcp_dest_path
 echo "Complete"
