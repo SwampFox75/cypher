@@ -19,7 +19,7 @@ fi
 path_graphblas="$HOME/Documents/GitHub/GraphBLAS"
 echo "Creating directory GraphBLAS in $HOME/Documents/GitHub/"
 mkdir $path_graphblas
-git clone https://github.com/DrTimothyAldenDavis/GraphBLAS.git $path_graphblas
+git clone https://github.com/DrTimothyAldenDavis/GraphBLAS.git --branch v9.4.branch --single-branch $path_graphblas
 make -C $path_graphblas JOBS=4
 sudo make -C $path_graphblas install
 make -C $path_graphblas clean
