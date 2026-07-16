@@ -28,12 +28,12 @@ make -C $path_graphblas clean
 path_cryptopant="$HOME/Documents/GitHub/cryptopANT"
 echo "Creating directory cryptopANT in $HOME/Documents/GitHub/"
 mkdir $path_cryptopant
-wget -P ${path_cryptopant}/ https://ant.isi.edu/software/cryptopANT/cryptopANT-1.3.1.tar.gz
-tar -xzf ${path_cryptopant}/cryptopANT-1.3.1.tar.gz -C $path_cryptopant
-(cd $HOME/Documents/GitHub/cryptopANT/cryptopANT-1.3.1 && ./configure --with-scramble_ips)
-make -C ${path_cryptopant}/cryptopANT-1.3.1
-sudo make -C ${path_cryptopant}/cryptopANT-1.3.1 install
-make -C ${path_cryptopant}/cryptopANT-1.3.1 clean
+wget -P ${path_cryptopant}/ https://ant.isi.edu/software/cryptopANT/cryptopANT-1.3.2.tar.gz
+tar -xzf ${path_cryptopant}/cryptopANT-1.3.2.tar.gz -C $path_cryptopant
+(cd $HOME/Documents/GitHub/cryptopANT/cryptopANT-1.3.2 && ./configure --with-scramble_ips)
+make -C ${path_cryptopant}/cryptopANT-1.3.2
+sudo make -C ${path_cryptopant}/cryptopANT-1.3.2 install
+make -C ${path_cryptopant}/cryptopANT-1.3.2 clean
 
 # download and install ILANDS (CyPhER)
 path_ilands="$HOME/Documents/GitHub/ILANDS"
